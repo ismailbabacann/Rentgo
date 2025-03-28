@@ -33,7 +33,7 @@ class SignUpController: UIViewController {
             performSegue(withIdentifier: "fromSignupToHomeVC", sender: nil)
             
         } else{
-            makeAlert(title: "ERROR", message: "Fill every field!")
+            makeAlert(title: "ERROR", message: "Please complete all fields!")
         }
     }
     

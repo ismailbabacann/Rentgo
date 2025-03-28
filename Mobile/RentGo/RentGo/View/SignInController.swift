@@ -23,7 +23,7 @@ class SignInController: UIViewController {
         signUpLabel.addGestureRecognizer(tapGestureSignUp)
         signUpLabel.isUserInteractionEnabled = true
         
-        let tapGestureForgotPassword = UITapGestureRecognizer(target: self, action: #selector(signUpLabelTapped))
+        let tapGestureForgotPassword = UITapGestureRecognizer(target: self, action: #selector(forgotPasswordTapped))
         forgotPasswordLabel.addGestureRecognizer(tapGestureForgotPassword)
         forgotPasswordLabel.isUserInteractionEnabled = true
         
@@ -35,7 +35,7 @@ class SignInController: UIViewController {
             performSegue(withIdentifier: "fromSignInToHomeVC", sender: nil)
             
         } else{
-            makeAlert(title: "ERROR", message: "Fill every field!")
+            makeAlert(title: "ERROR", message: "Please complete all fields!")
         }
     }
     
